@@ -4,7 +4,7 @@ Small increments, in order. Each one ends with something that runs. "Learn" is w
 
 ## Phase 0: Tooling and Python through geodata
 
-- [ ] **0.1 Setup.** WSL2, Docker Desktop (WSL backend), git, Python 3 in WSL, a virtual environment.
+- [x] **0.1 Setup.** WSL2, Docker Desktop (WSL backend), git, Python 3 in WSL, a virtual environment.
   Learn: venv vs `node_modules`, pip/`requirements.txt` vs npm/`package.json`.
 - [ ] **0.2 Python crash course in a tiny script.** Read a JSON file, functions, dicts, lists, comprehensions, f-strings, type hints, `if __name__ == "__main__"`.
   Learn: Python ↔ JS/Java differences.

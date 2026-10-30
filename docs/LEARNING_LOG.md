@@ -18,3 +18,14 @@ Built:
 Learned:
 Questions:
 -->
+
+### 2026-10-30: 0.1 Setup
+Built: Ubuntu 24.04 in WSL2, Docker Desktop with WSL integration, git configured in Linux (reusing Windows Git Credential Manager), repo cloned to `~/code/geo-sim-f1`, `.gitattributes` forcing LF, Python 3.12 venv in `.venv/`.
+Learned:
+- WSL2 is a real Linux kernel in a lightweight VM; code lives in the Linux filesystem because `/mnt/c` is slow and breaks permissions, line endings and file watching.
+- The `docker` CLI is a client talking HTTP to the daemon over `/var/run/docker.sock`; "permission denied" was Linux file permissions, fixed by joining the `docker` group (`usermod -aG`, takes effect on next login).
+- `wsl --shutdown` also stops Docker Desktop's engine.
+- Shell globs: `*` expands to filenames; heredocs with `'EOF'` turn expansion off.
+- venv ≈ `node_modules`, but explicit: `activate` changes `PATH` in the current shell. Ubuntu blocks global `pip install` (externally-managed-environment).
+- `core.autocrlf` is per machine; `.gitattributes` is per repo and applies to everyone.
+Questions:

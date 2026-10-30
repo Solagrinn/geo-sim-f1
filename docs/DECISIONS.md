@@ -19,3 +19,9 @@ Short records of why things are the way they are. These are interview talking po
 **Decision:** Begin with one Django project; extract the dataset, telemetry and analysis services when the roadmap reaches them.
 **Alternatives:** Microservices from day one.
 **Why:** Each split should be justified (heavy dependencies, long-running work, independent scaling, external failure modes). Learning when to split is the actual skill.
+
+## 004: Develop inside WSL2, not native Windows
+
+**Decision:** Repo, Python and geo tooling live in Ubuntu (WSL2); Docker Desktop uses the WSL backend.
+**Alternatives:** Native Windows Python + GDAL; a full Linux VM; dual boot.
+**Why:** GDAL/rasterio and Docker are Linux-first; production containers are Linux, so dev matches prod. The Linux filesystem avoids slow, buggy cross-OS file access. WSL2 keeps Windows tools (PyCharm, browser) usable.
